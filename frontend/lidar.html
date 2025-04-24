@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForestGuard - LiDAR Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>ForestGuard: LiDAR Tree Height Monitoring</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="fileUpload" accept=".laz" multiple>
+            <button onclick="uploadFiles()">Upload LiDAR Data</button>
+        </div>
+
+        <div id="map"></div>
+        <button onclick="fetchHighRiskLocations()">Show High-Risk Areas</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

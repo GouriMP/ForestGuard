@@ -1,0 +1,148 @@
+body {
+    padding-top: 40px; /* Smaller height for navbar */
+    padding-bottom: 52px; /* Increased padding to account for footer height */
+    min-height: 100vh;
+    position: relative;
+    background-color: lightgreen;
+    margin: 0; /* Ensures no default margins causing issues */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999; /* Higher z-index to ensure it's on top */
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.navbar-brand {
+    font-size: 0.95rem;
+}
+
+.nav-link {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999; /* Higher z-index to ensure it's on top */
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    height: 32px; /* Explicitly setting footer height */
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1; /* Lower z-index for content */
+    padding-top: 20px;
+    padding-bottom: 40px; /* Added extra padding at the bottom */
+    margin-bottom: 32px; /* Add margin equal to footer height */
+}
+
+.hero-section {
+    position: relative;
+    height: 500px;
+    background-image: url("https://images.pexels.com/photos/214073/pexels-photo-214073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.features-section .card {
+    transition: transform 0.3s ease;
+    border-color: var(--primary-color);
+}
+
+.features-section .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Main container to prevent footer overlap */
+main, .main-content {
+    margin-bottom: 40px; /* Ensures space before footer */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Login Page Specific Styles */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Dashboard Specific Styles */
+.dashboard-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 40px; /* Ensures space before footer */
+}
+
+/* Utility Classes */
+.bg-green-light {
+    background-color: var(--background-color);
+}
+
+.text-green-dark {
+    color: var(--primary-color);
+}

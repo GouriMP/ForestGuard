@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powerline & Tree Risk Assessment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Powerline & Tree Risk Assessment</h1>
+        
+        <div class="menu">
+            <button class="menu-btn active" data-tab="powerline-upload">Powerline Detection</button>
+            <button class="menu-btn" data-tab="tree-height">Tree Height</button>
+            <button class="menu-btn" data-tab="fire-risk">Fire Risk</button>
+        </div>
+
+        <div id="map-container">
+            <div id="map"></div>
+            <p class="map-instruction">Drag the marker to select your location</p>
+        </div>
+
+        <div id="powerline-upload" class="tab-content active">
+            <div class="upload-container">
+                <input type="file" id="fileInput" multiple>
+                <button id="uploadButton">Upload & Detect Powerlines</button>
+            </div>
+
+            <div id="output"></div>
+        </div>
+
+        <div id="tree-height" class="tab-content">
+            <div class="tree-height-container">
+                <button id="calculateTreeHeight">Get Tree Height</button>
+                <div id="treeHeightOutput"></div>
+            </div>
+        </div>
+
+        <div id="fire-risk" class="tab-content">
+            <div class="fire-risk-container">
+                <button id="analyzeFireRisk">Analyze Fire Risk</button>
+                <div id="fireRiskOutput"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
